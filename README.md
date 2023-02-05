@@ -18,7 +18,11 @@ Spring Boot Extension Pack
 
 **3. Build and run the app**
 
-+ open `src/main/java/DemoApplication.java`
++ open `src/main/java/com/internship/Controllers/OpenAiController.java`
+
++ change the variable value 'apiKey' and put your TOKEN-KEY from the OPENAI platform 
+
++ open `src/main/java/com/internship/demo/DemoApplication.java`
 
 + run the application from the icon in the top right 
 
