@@ -20,6 +20,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RequestMapping("/completion")
 public class OpenAiController {
 
+    private String apiKey = "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";
+
+    private String endpoint = "https://api.openai.com/v1/completions";
+
     @PostMapping
     public String generateCompletion(@RequestBody Map<String, Object> requestData) {
         // Send the prompt data to OpenAI API for completion
@@ -27,12 +31,12 @@ public class OpenAiController {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        String apiKey = "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";
+        String apiKey = this.apiKey;
         headers.set("Authorization", "Bearer " + apiKey);
 
         HttpEntity<Map<String, Object>> request = new HttpEntity<>(requestData, headers);
 
-        String endpoint = "https://api.openai.com/v1/completions";
+        String endpoint = this.endpoint;
         ResponseEntity<String> response = restTemplate.postForEntity(endpoint, request, String.class);
 
         // Parse the response body into a Java object
@@ -53,4 +57,3 @@ public class OpenAiController {
         return text;
     }
 }
-
