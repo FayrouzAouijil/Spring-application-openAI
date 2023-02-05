@@ -27,7 +27,7 @@ public class OpenAiController {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        String apiKey = "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";
+        String apiKey = "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";
         headers.set("Authorization", "Bearer " + apiKey);
 
         HttpEntity<Map<String, Object>> request = new HttpEntity<>(requestData, headers);
