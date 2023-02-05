@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RequestMapping("/completion")
 public class OpenAiController {
 
-    private String apiKey = "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";
+    private String apiKey = "YOUR TOKEN-KEY";
 
     private String endpoint = "https://api.openai.com/v1/completions";
 
